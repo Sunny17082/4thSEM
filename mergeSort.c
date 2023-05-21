@@ -19,10 +19,9 @@ void merge(int a[],int l,int mid,int h)
 }
 void mergeSort(int arr[],int l,int h)
 {
-    int mid;
     if(l<h)
     {
-        mid=(l+h)/2;
+        int mid=(l+h)/2;
         mergeSort(arr,l,mid);
         mergeSort(arr,mid+1,h);
         merge(arr,l,mid,h);
@@ -32,18 +31,11 @@ int main()
 {
     int arr[100];
     int n;
-    printf("Enter Size\n");
     scanf("%d",&n);
-    printf("Enter elements\n");
     for(int i=0;i<n;i++)
-    {
         scanf("%d",&arr[i]);
-    }
     mergeSort(arr,0,n-1);
-    printf("Sorted array:\n");
     for(int i=0;i<n;i++)
-    {
         printf("%d ",arr[i]);
-    }
     return 0;
 }
